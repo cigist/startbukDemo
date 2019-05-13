@@ -29,6 +29,7 @@ export default class Login extends Component{
                placeholder = "Password"
                placeholderTextColor = "grey"
                autoCapitalize = "none"
+               secureTextEntry={true} 
                onChangeText = {this.handlePassword}/>           
             <TouchableOpacity
                style = {styles.submitButton}
