@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, TouchableOpacity, TextInput, StyleSheet} from 'react-native';
+import Logo from './Logo';
 
 export default class Login extends Component{
     state = {
@@ -18,6 +19,7 @@ export default class Login extends Component{
     render(){
         return(
             <View style = {styles.container}>
+            <Logo />
             <TextInput style = {styles.input}
                underlineColorAndroid = "transparent"
                placeholder = "Email"
@@ -45,7 +47,7 @@ export default class Login extends Component{
 }
 const styles = StyleSheet.create({
     container: {
-       paddingTop: '50%'
+       paddingTop: 1
     },
     input: {
        margin: 15,
