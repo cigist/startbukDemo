@@ -7,17 +7,25 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform,Button, StyleSheet, Text, View} from 'react-native';
 import ButtoSave from "./src/components/_ButtonSave";
-import LoginContainer from './src/containers/Login/LoginContainer'
+import LoginContainer from './src/containers/LoginContainer'
 import Styles from './src/styles/Styles';
 
 export default class App extends Component{
+  constructor(props){
+    super(props);
+    this.state={
+       name:"CLOSE"
+    }
+  }
   render() {
     return (
       <View>
         <LoginContainer />
-        {/* <ButtoSave /> */}
+        <ButtoSave titleName={"OPEN"} colorMe={"blue"}/>
+        <ButtoSave titleName={"BACK"} colorMe={"red"}/>
+        <Button title={this.state.name}/>
       </View>
     );
   }
